@@ -13,3 +13,5 @@ class SingleRoom extends Component {
     )
   }
 }
+
+export default SingleRoom

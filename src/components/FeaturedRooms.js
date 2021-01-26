@@ -13,10 +13,8 @@ class FeaturedRooms extends Component {
   static contextType = RoomContext
 
   render(){
-    const value = this.context
-    console.log(value)
     return(
-      <div>Hello from featured rooms {value}</div>
+      <div>Hello from featured rooms</div>
     )
   }
 }

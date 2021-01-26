@@ -18,6 +18,13 @@ class RoomProvider extends Component {
   componentDidMount(){
     let rooms = this.formatData(items)
     console.log(rooms)
+    let featuredRooms = rooms.filter(room => room.feature === true)
+    this.setState({
+      rooms,
+      featuredRooms,
+      sortedRooms: rooms,
+      loading: false
+    }) 
 
   }
 
@@ -33,7 +40,7 @@ class RoomProvider extends Component {
 
   render(){
     return(
-      <RoomContext.Provider value="hello">{this.props.children}</RoomContext.Provider>
+      <RoomContext.Provider value={{...this.state}}>{this.props.children}</RoomContext.Provider>
     )
   }
 }

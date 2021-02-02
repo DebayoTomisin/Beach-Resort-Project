@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from "react-router-dom";
 import App from './App';
 import {RoomProvider} from "./context"
+import { RoomProv } from "./context2";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

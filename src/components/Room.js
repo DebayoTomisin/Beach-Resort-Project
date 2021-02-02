@@ -2,10 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import {Link} from "react-router-dom"
 import defaultImg from "../images/defaultBcg.jpeg"
-
+import {useGlobalContext} from "../context2"
 export default function Room({ room }){
   const {name, slug, images, price} = room
-
+  
   return(
     <article className="room">
       <div className="img-container">

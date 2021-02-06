@@ -30,7 +30,6 @@ export default function RoomFilter({ rooms }) {
   })
 
   let capacities = getUnique(rooms, 'capacity')
-  capacities = [0, ...capacities]
   capacities = capacities.map((item, index) => {
     return(
       <option key={index} value={item}>{item}</option>
@@ -48,6 +47,16 @@ export default function RoomFilter({ rooms }) {
           <select name="type" id="type" value={type} className="form-control" onChange={handleChange}>{types}</select>
         </div>
         {/*end of select type */}
+        <div className="form-group">
+          <label htmlFor="capacity">Guests</label>
+          <select name="capacity" id="capacity" value={capacity} className="form-control" onChange={handleChange}>{capacities}</select>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="price">room price ${price}</label>
+          <input id="price" type="range" min={minPrice} max={maxPrice} name="price" value={price} className="form-control" onChange={handleChange}/>
+
+        </div>
       </form>
     </section>
   )
